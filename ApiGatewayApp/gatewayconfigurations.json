@@ -5,11 +5,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62387
+            "Host": "localhost",
+            "Port": 62387
         }
       ],
-      "UpstreamPathTemplate": "/api/products",
+      "UpstreamPathTemplate": "/products",
       "UpstreamHttpMethod": [ "Get", "Post" ]
     },
     {
@@ -17,16 +17,40 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 10485
+            "Host": "localhost",
+            "Port": 10485
         }
       ],
-      "UpstreamPathTemplate": "/api/vendors",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/vendors",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Auth/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60862
+        }
+      ],
+      "UpstreamPathTemplate": "/register",
+      "UpstreamHttpMethod": [ "Get" , "Post"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Auth/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60862
+        }
+      ],
+      "UpstreamPathTemplate": "/Login",
+      "UpstreamHttpMethod": ["Get", "Post" ]
     }
 
   ],
-  "GobalConfiguration": {
-    "BaseUrl": "https://localhost:6001"
-  }
+    "GobalConfiguration": {
+        "BaseUrl": "http://localhost:2185"
+    }
 }
